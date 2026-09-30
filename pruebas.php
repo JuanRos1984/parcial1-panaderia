@@ -8,7 +8,7 @@ $compra = [new Linea('Pan sobao (docena)', 2, 120), new Linea('Bizcocho 1 lb', 1
 $igual = fn (float $a, float $b) => abs($a - $b) < 0.005;
 
 $casos = [
-    'El subtotal suma cantidad por precio' => fn () => $igual(Precios::calcularSubtotal($compra), 890),
+    'El subtotal suma cantidad por precio' => fn () => $igual(Precios::subtotal($compra), 890),
     'El ITBIS es el 18 % del subtotal' => fn () => $igual(Precios::impuesto(100), 18),
     'El resumen muestra el total' => fn () => str_contains(Reporte::resumen($compra), 'Total'),
 ];

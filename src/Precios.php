@@ -7,7 +7,7 @@ final class Precios
     public const ITBIS = 0.18;
 
     // Suma cantidad por precio unitario de cada línea.
-    public static function calcularSubtotal(array $lineas): float
+    public static function subtotal(array $lineas): float
     {
         return array_sum(array_map(fn (Linea $l) => $l->cantidad * $l->precioUnitario, $lineas));
     }
