@@ -11,6 +11,8 @@ $casos = [
     'El subtotal suma cantidad por precio' => fn () => $igual(Precios::subtotal($compra), 890),
     'El ITBIS es el 18 % del subtotal' => fn () => $igual(Precios::impuesto(100), 18),
     'El resumen muestra el total' => fn () => str_contains(Reporte::resumen($compra), 'Total'),
+    'Descuento del 12 % en compras grandes' => fn () => $igual(Precios::descuento(20000), 2400),
+    'Sin descuento en compras pequeñas' => fn () => $igual(Precios::descuento(100), 0),
 ];
 
 $fallas = 0;
