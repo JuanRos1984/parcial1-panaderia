@@ -2,7 +2,7 @@
 
 final class Precios
 {
-    public const MONTO_MINIMO_DESCUENTO = 700;
+    public const MONTO_MINIMO_DESCUENTO = 400;
 
     public const ITBIS = 0.18;
 
