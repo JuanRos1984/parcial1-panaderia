@@ -16,4 +16,6 @@ final class Precios
     {
         return round($subtotal * self::ITBIS, 2);
     }
+
+    public static function cargoEnvio(float $subtotal): float { return $subtotal >= 1200 ? 0.0 : 90.0; }
 }
