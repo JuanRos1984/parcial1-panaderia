@@ -7,5 +7,8 @@ final class Linea
         public readonly int $cantidad,
         public readonly float $precioUnitario,
     ) {
+        if ($cantidad <= 0) {
+            throw new InvalidArgumentException('La cantidad debe ser mayor que cero.');
+        }
     }
 }
